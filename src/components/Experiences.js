@@ -5,6 +5,7 @@ import ladies from '../images/smiling-ladies.png';
 export default function Experiences () {
     return(
         <div>
+            {/* <div className="logo-style"></div> */}
             <div className="experience">
                 <div className="experience-1">
                         <p>Amazing Experiences from Our

@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/vasiti/static/css/main.348a6590.chunk.css",
+    "main.js": "/vasiti/static/js/main.12cab874.chunk.js",
+    "main.js.map": "/vasiti/static/js/main.12cab874.chunk.js.map",
+    "runtime-main.js": "/vasiti/static/js/runtime-main.0e43d44b.js",
+    "runtime-main.js.map": "/vasiti/static/js/runtime-main.0e43d44b.js.map",
+    "static/js/2.9b6114cc.chunk.js": "/vasiti/static/js/2.9b6114cc.chunk.js",
+    "static/js/2.9b6114cc.chunk.js.map": "/vasiti/static/js/2.9b6114cc.chunk.js.map",
+    "index.html": "/vasiti/index.html",
+    "precache-manifest.f908131e143686cf227894daf1bd0638.js": "/vasiti/precache-manifest.f908131e143686cf227894daf1bd0638.js",
+    "service-worker.js": "/vasiti/service-worker.js",
+    "static/css/main.348a6590.chunk.css.map": "/vasiti/static/css/main.348a6590.chunk.css.map",
+    "static/js/2.9b6114cc.chunk.js.LICENSE.txt": "/vasiti/static/js/2.9b6114cc.chunk.js.LICENSE.txt",
+    "static/media/Adetola.png": "/vasiti/static/media/Adetola.2f047f45.png",
+    "static/media/good-guy.png": "/vasiti/static/media/good-guy.a85cd502.png",
+    "static/media/phone.png": "/vasiti/static/media/phone.b9c48fbd.png",
+    "static/media/smiling-couples.png": "/vasiti/static/media/smiling-couples.fd7e44e0.png",
+    "static/media/smiling-ladies.png": "/vasiti/static/media/smiling-ladies.256dbd9b.png",
+    "static/media/vasiti.png": "/vasiti/static/media/vasiti.db02f9b5.png",
+    "static/media/woman-shoppingbag-card 1.png": "/vasiti/static/media/woman-shoppingbag-card 1.b5c493da.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0e43d44b.js",
+    "static/js/2.9b6114cc.chunk.js",
+    "static/css/main.348a6590.chunk.css",
+    "static/js/main.12cab874.chunk.js"
+  ]
+}
