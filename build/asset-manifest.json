@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/vasiti/static/css/main.348a6590.chunk.css",
+    "main.css": "/vasiti/static/css/main.bbe9a435.chunk.css",
     "main.js": "/vasiti/static/js/main.12cab874.chunk.js",
     "main.js.map": "/vasiti/static/js/main.12cab874.chunk.js.map",
     "runtime-main.js": "/vasiti/static/js/runtime-main.0e43d44b.js",
@@ -8,9 +8,9 @@
     "static/js/2.9b6114cc.chunk.js": "/vasiti/static/js/2.9b6114cc.chunk.js",
     "static/js/2.9b6114cc.chunk.js.map": "/vasiti/static/js/2.9b6114cc.chunk.js.map",
     "index.html": "/vasiti/index.html",
-    "precache-manifest.f908131e143686cf227894daf1bd0638.js": "/vasiti/precache-manifest.f908131e143686cf227894daf1bd0638.js",
+    "precache-manifest.cd43e927c603731ed2c195ce1f0e2294.js": "/vasiti/precache-manifest.cd43e927c603731ed2c195ce1f0e2294.js",
     "service-worker.js": "/vasiti/service-worker.js",
-    "static/css/main.348a6590.chunk.css.map": "/vasiti/static/css/main.348a6590.chunk.css.map",
+    "static/css/main.bbe9a435.chunk.css.map": "/vasiti/static/css/main.bbe9a435.chunk.css.map",
     "static/js/2.9b6114cc.chunk.js.LICENSE.txt": "/vasiti/static/js/2.9b6114cc.chunk.js.LICENSE.txt",
     "static/media/Adetola.png": "/vasiti/static/media/Adetola.2f047f45.png",
     "static/media/good-guy.png": "/vasiti/static/media/good-guy.a85cd502.png",
@@ -23,7 +23,7 @@
   "entrypoints": [
     "static/js/runtime-main.0e43d44b.js",
     "static/js/2.9b6114cc.chunk.js",
-    "static/css/main.348a6590.chunk.css",
+    "static/css/main.bbe9a435.chunk.css",
     "static/js/main.12cab874.chunk.js"
   ]
 }

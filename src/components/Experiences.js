@@ -1,11 +1,12 @@
 import React from 'react';
 import couple from '../images/smiling-couples.png';
 import ladies from '../images/smiling-ladies.png';
+import vasitiLogo from '../images/vasiti.png';
 
 export default function Experiences () {
     return(
         <div>
-            {/* <div className="logo-style"></div> */}
+            <img src={vasitiLogo} className="vasiti-logo" alt="brand logo"/>
             <div className="experience">
                 <div className="experience-1">
                         <p>Amazing Experiences from Our
