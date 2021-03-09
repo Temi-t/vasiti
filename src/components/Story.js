@@ -7,14 +7,16 @@ export default function Story ({ story }) {
     return(
         <div>
             <div className="card-profile" >
-            <img src={profileImg} alt=" profile"/>
-            <h3>Adetola Fashina</h3>
-            <div>
-                <span>location</span>
-                <span>Customer</span>
+                <img src={profileImg} alt=" profile"/>
+                <h3>Adetola Fashina</h3>
+                <div>
+                    <span>location</span>
+                    <span>Customer</span>
+                </div>
+                <div className="story">
+                    <p>{story.details}</p>
+                </div>
             </div>
-            <p>{story.details}</p>
-        </div>
         </div>
     )
 }

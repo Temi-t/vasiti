@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/vasiti/precache-manifest.cd43e927c603731ed2c195ce1f0e2294.js"
+  "/vasiti/precache-manifest.81574c34243e892f3a2645b34d674969.js"
 );
 
 self.addEventListener('message', (event) => {
