@@ -8,7 +8,7 @@ export default function Nav () {
     return(
         <div className='nav-major'>
             <nav>
-                <Link to="/"><img src={logo} alt='brand logo' /></Link>
+                <Link to="/vasiti"><img src={logo} alt='brand logo' /></Link>
                 <div className='nav-minor'>
                     <ul className="nav-links">
                         <li>about us</li>

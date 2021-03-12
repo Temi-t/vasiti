@@ -40,7 +40,7 @@ function App() {
             <CssBaseline />
             <Nav />
             <Switch>
-              <Route path="/" exact>
+              <Route path="vasiti/" exact>
                 <Experiences />
                 <Profiles />
                 <ExperienceExtra />
