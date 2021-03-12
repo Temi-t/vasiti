@@ -4,11 +4,11 @@ import Story from './Story';
 import { useStoryContext } from './StoryContext';
 
 const LS_KEY = "story.key";
-export default function Stories () {
+export default function Stories ({match}) {
     const storyInput = useRef();
     const [stories, setStories] = useStoryContext();
     // const handleStory = useHandleStoryContext();
-
+   
     useEffect(()=>{
       const storedStories = JSON.parse(localStorage.getItem(LS_KEY))
       storedStories && setStories(storedStories)

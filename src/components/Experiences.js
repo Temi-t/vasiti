@@ -2,6 +2,8 @@ import React from 'react';
 import couple from '../images/smiling-couples.png';
 import ladies from '../images/smiling-ladies.png';
 import vasitiLogo from '../images/vasiti.png';
+import { Link } from "react-router-dom";
+
 
 export default function Experiences () {
     return(
@@ -33,7 +35,7 @@ export default function Experiences () {
                             very good customer service, an all round great
                             experience. I would definately be coming back!
                         </p>
-                        <h3>SHARE YOUR OWN STORY!</h3>
+                        <h3 component={Link} to={"/stories"}>SHARE YOUR OWN STORY!</h3>
                     </div>
                 </div>
             </div>
