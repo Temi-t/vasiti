@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/vasiti/static/css/main.f92ea788.chunk.css",
-    "main.js": "/vasiti/static/js/main.b9a88fbd.chunk.js",
-    "main.js.map": "/vasiti/static/js/main.b9a88fbd.chunk.js.map",
+    "main.js": "/vasiti/static/js/main.819725a2.chunk.js",
+    "main.js.map": "/vasiti/static/js/main.819725a2.chunk.js.map",
     "runtime-main.js": "/vasiti/static/js/runtime-main.0e43d44b.js",
     "runtime-main.js.map": "/vasiti/static/js/runtime-main.0e43d44b.js.map",
     "static/js/2.a7bf7988.chunk.js": "/vasiti/static/js/2.a7bf7988.chunk.js",
     "static/js/2.a7bf7988.chunk.js.map": "/vasiti/static/js/2.a7bf7988.chunk.js.map",
     "index.html": "/vasiti/index.html",
-    "precache-manifest.f6add4332c0c3d1f66ee5a914a13dfa9.js": "/vasiti/precache-manifest.f6add4332c0c3d1f66ee5a914a13dfa9.js",
+    "precache-manifest.112220a7578ba92bc96d212c169e3400.js": "/vasiti/precache-manifest.112220a7578ba92bc96d212c169e3400.js",
     "service-worker.js": "/vasiti/service-worker.js",
     "static/css/main.f92ea788.chunk.css.map": "/vasiti/static/css/main.f92ea788.chunk.css.map",
     "static/js/2.a7bf7988.chunk.js.LICENSE.txt": "/vasiti/static/js/2.a7bf7988.chunk.js.LICENSE.txt",
@@ -24,6 +24,6 @@
     "static/js/runtime-main.0e43d44b.js",
     "static/js/2.a7bf7988.chunk.js",
     "static/css/main.f92ea788.chunk.css",
-    "static/js/main.b9a88fbd.chunk.js"
+    "static/js/main.819725a2.chunk.js"
   ]
 }
