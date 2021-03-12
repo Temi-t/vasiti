@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5a5912473c185c85610a6f2764608c12",
+    "revision": "1a900f8b0e7411a4b227ec6e84662de5",
     "url": "/vasiti/index.html"
   },
   {
-    "revision": "c4078ad03a0da6887ff3",
+    "revision": "02ccb84ccdce4d99cde2",
     "url": "/vasiti/static/css/main.f92ea788.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vasiti/static/js/2.a7bf7988.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c4078ad03a0da6887ff3",
-    "url": "/vasiti/static/js/main.819725a2.chunk.js"
+    "revision": "02ccb84ccdce4d99cde2",
+    "url": "/vasiti/static/js/main.20b7504a.chunk.js"
   },
   {
     "revision": "b34825b2c6d0ce76f903",
