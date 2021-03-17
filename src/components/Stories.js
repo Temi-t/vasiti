@@ -1,67 +1,97 @@
-import React, { useRef, useEffect } from 'react';
-import Story from './Story';
-// import { useStoryContext, useHandleStoryContext } from './StoryContext';
-import { useStoryContext } from './StoryContext';
+import React from 'react';
+// import Story from './Story';
+import { useHandleStoryContext, useStory, useFirstName, useLastName, useLocation } from './StoryContext';
+// import { useStoryContext } from './StoryContext';
+import Button from '@material-ui/core/Button';
 
-const LS_KEY = "story.key";
-export default function Stories ({match}) {
-    const storyInput = useRef();
-    const [stories, setStories] = useStoryContext();
-    // const handleStory = useHandleStoryContext();
-   
-    useEffect(()=>{
-      const storedStories = JSON.parse(localStorage.getItem(LS_KEY))
-      storedStories && setStories(storedStories)
-    }, []);
-    useEffect(()=>{
-      localStorage.setItem(LS_KEY, JSON.stringify(stories))
-    }, [stories]);
 
-  const rand = () => {
-    return Math.floor((Math.random() * 10000) + 1)
-  }
+export default function Stories () {
+    const handleStorySubmit = useHandleStoryContext();
+    // const clearStory = useClearStoryContext();
+    // const [stories, setStories] = useStoriesContext();
+    const [userStory, setUserStory] = useStory();
+    const [firstName, setFirstName] = useFirstName();
+    const [lastName, setLastName] = useLastName();
+    const [location, setLocation] = useLocation();
 
-  const handleStory = (e) => {
-    const userInput = storyInput.current.value
-    if(userInput === "") return
-    setStories(prevStories => [
-      ...prevStories, {
-        id: rand(),
-       details: userInput, }
-    ])
-    storyInput.current.value = null
-  }
 
-  const clearStory = () => {
-    localStorage.clear()
-  }
+    
+    const handleStoryChange = (e) => {
+      setUserStory(e.target.value)
+    }
+    const handleFirstName = (e) => {
+      setFirstName(e.target.value)
+    }
+    const handleLastName = (e) => {
+      setLastName(e.target.value)
+    }
+    const handleLocation = (e) => {
+      setLocation(e.target.value)
+    }
+
+    // const shareStory = document.querySelector('.shareStory');
+    // const modalBg = document.querySelector('.modal-bg');
+    
+    // shareStory.addEventListener('click', function(){
+    //   modalBg.classList.add('modal-pop');
+    // })
+    
   
     return(
-        <div>
-            <form className="story-class" onSubmit={handleStory}>
+        <div className="modal-bg">
+          <div className="stories-form">
+            <form className="story-class" onSubmit={handleStorySubmit}>
+            < span className="x">X</span>
               <h2>Share your amazing story!</h2>
-              <label htmlFor="upload">
-                Upload your picture
-              </label>
-              <input id="upload" name="upload" type= "file" placeholder="Choose Image"/>
+              <label htmlFor="user-image">Upload your picture</label>
+              <input id="user-image" name="user-image"  type="file" placeholder="Choose Image"/><br/><br/>
 
               {/* nameInput and lastNameInput */}
-              <input type="text" name="firstName" placeholder="Enter first name" /> 
-              <input type="text" name="lastName" placeholder="Enter last name" /> 
-              {/* textField */}
-              <input type="textfield" row="5" column="9"/>
-              {/* what did you 
-              interact with vasiti as? 
-              customer/vendor radio button */}
+              <div className="user-name">
+                <div>
+                  <label htmlFor="firstName">Firstname</label><br/>
+                  <input type="text" id="firstName" name="firstName" 
+                  onChange={handleFirstName} placeholder="Enter first name" value={firstName} /> 
+                </div>
+                <div>
+                  <label htmlFor="lastName">Lastname</label><br/>
+                  <input type="text" id="lastName" name="lastName" 
+                  onChange={handleLastName} placeholder="Enter last name" value={lastName} />
+                </div>
+              </div><br/>
 
               {/* Share your story! */}
+              <label htmlFor="storyInput">Share your story</label>
+              {/* <textarea id="storyInput" name="storyInput" ref={storyInput} row="15" column="20"></textarea> */}
+              <textarea id="storyInput" name="storyInput"
+                row="15" column="20"
+               onChange={handleStoryChange} ></textarea>
 
-              <input type="text" ref={storyInput}/>
-              <button type="submit">Share your story!</button>
-              <button onClick={clearStory}>Delete my Stories</button>
+              <pre>What did you interact with vasiti as?      <input type="radio" id="customer" name="cust-vendor" value="customer" />
+                <label htmlFor="customer">Customer</label>
+                <input type="radio" id="vendor" name="cust-vendor" value="vendor" />
+                <label htmlFor="vendor">Vendor</label>
+              </pre>
+
+              <label htmlFor="location">City or Higher Institution(for Students)</label>
+              <input type="text" id="location" name="location" onChange={handleLocation} value={location} />
+
+              <div className="story-btn">
+                <Button className="btn" size="large" variant="contained"
+                  href="#contained-buttons" 
+                  style={{backgroundColor: "#FF5C00",
+                  color: "white",
+                  margin: '0',
+                  width: "50%",
+                  float: "right"}} >
+                  Share your story!
+                </Button>
+              </div>
+              {/* <button type="submit">Share your story!</button> */}
+              {/* <button onClick={clearStory}>Delete my Stories</button> */}
             </form>
-            {stories.map((story, i)=> <Story story={story} key={"story_"+ i} />)}
             
+          </div>
         </div>
     )
 }
