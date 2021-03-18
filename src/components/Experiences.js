@@ -2,10 +2,11 @@ import React from 'react';
 import couple from '../images/smiling-couples.png';
 import ladies from '../images/smiling-ladies.png';
 import vasitiLogo from '../images/vasiti.png';
-// import { Link } from "react-router-dom";
-
+import { useModal } from './StoryContext';
 
 export default function Experiences () {
+    const [isModalOpen, setIsModalOpen] = useModal();
+    // console.log("Modal Status: ", isModalOpen)
     return(
         <div>
             <img src={vasitiLogo} className="vasiti-logo" alt="brand logo"/>
@@ -35,9 +36,7 @@ export default function Experiences () {
                             very good customer service, an all round great
                             experience. I would definately be coming back!
                         </p>
-                        <h3 className="shareStory">SHARE YOUR OWN STORY!</h3>
-                        {/* <h3><Link to="/stories">SHARE YOUR OWN STORY!</Link></h3> */}
-
+                        <h3 className="shareStory" onClick={()=>setIsModalOpen(!isModalOpen)} >SHARE YOUR OWN STORY!</h3>
                     </div>
                 </div>
             </div>

@@ -155,6 +155,9 @@ n
   margin-bottom: 10px;
   text-decoration-line: underline;
   text-decoration-color: #FF5C00;
+  cursor: pointer;
+    /* transition: all 1000ms; */
+
 }
 
 .card-profile{
@@ -216,6 +219,7 @@ n
   text-decoration-line: underline;
   text-decoration-color: #FF5C00;
   margin-top: 30px;
+  cursor: pointer;
 }
 .experience-5-detail{
   width: 500px;
@@ -294,12 +298,11 @@ background: rgb(38, 38, 38);
   text-align: left;
   padding: 1.3rem;
   border: 1px solid rgb(179, 179, 179);
-  border-radius: 5px;
+  border-radius: 16px;
 }
 
-.story-class > input, form > .user-name > div > input{
+.story-class > input, form > .user-name > div > input {
   outline-color: #FF5C00;
-  /* padding: 15px; */
   padding: 3%;
   color: grey;
   font-size: 1.1rem;
@@ -347,14 +350,15 @@ form > pre{
   display: flex;
   justify-content: center;
   align-items: center;
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s, opacity 450ms
+  /* visibility: hidden; */
+  /* opacity: 0; */
+  /* transition: visibility 0s, opacity 450ms */
+  /* transition: all 1000ms; */
 }
-.modal-pop{
+/* .modal-pop{
   visibility: visible;
   opacity: 1;
-}
+} */
 .x{
   position: relative;
   top: 2px;
@@ -365,8 +369,30 @@ form > pre{
   font-weight: 300;
   cursor: pointer;
 }
-
-
+/* thankyou */
+.thank-you-bg{
+  background: white;
+  border-radius: 16px;
+  border: 1px solid rgb(179, 179, 179);
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 350px;
+}
+.popper{
+  height: 6rem;
+  width: 6rem;
+  background:rgba(255, 230, 234, 0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popper span{
+  transform: scale(4);
+}
 
 
 

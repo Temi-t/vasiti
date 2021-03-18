@@ -19,19 +19,26 @@ const userStoryContext = createContext();
 export function useStory(){
     return useContext(userStoryContext)
 }
-const useFirstNameContext = createContext();
+const firstNameContext = createContext();
 export function useFirstName(){
-    return useContext(useFirstNameContext)
+    return useContext(firstNameContext)
 }
-const useLastNameContext = createContext();
+const lastNameContext = createContext();
 export function useLastName(){
-    return useContext(useLastNameContext)
+    return useContext(lastNameContext)
 }
-const useLocationContext = createContext();
+const locationContext = createContext();
 export function useLocation(){
-    return useContext(useLocationContext)
+    return useContext(locationContext)
 }
-
+const modalContext = createContext();
+export function useModal(){
+    return useContext(modalContext)
+}
+const thankYouContext = createContext();
+export function useThanks(){
+    return useContext(thankYouContext)
+}
 
 export default function StoryProvider({children}){
     const [stories, setStories] = useState([]);
@@ -39,6 +46,8 @@ export default function StoryProvider({children}){
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [location, setLocation] = useState('');
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [thankYou, setThankYou] = useState(false);
 
 //   const storyInput = useRef();
 
@@ -58,6 +67,7 @@ export default function StoryProvider({children}){
 //     // storyInput.current.value = null
 //     e.target.value = null
 //   }
+
     useEffect(()=>{
         const storedStories = JSON.parse(localStorage.getItem(LS_KEY))
         storedStories && setStories(storedStories)
@@ -88,23 +98,27 @@ export default function StoryProvider({children}){
     e.target.value = null
     }
 
-    const clearStory = () => {
-    localStorage.clear()
-    }
+    // const clearStory = () => {
+    // localStorage.clear()
+    // }
     return(
         <StoryContext.Provider value={[stories, setStories]}>
             <userStoryContext.Provider value={[userStory, setUserStory]}>
-                <useFirstNameContext.Provider value={[firstName, setFirstName]}>
-                    <useLastNameContext.Provider value={[lastName, setLastName]}>
-                        <useLocationContext.Provider value={[location, setLocation]}>
-                            <handleStoryContext.Provider value={handleStorySubmit}>
-                                {/* <clearStoryContext.Provider value={clearStory}> */}
-                                    {children}
-                                {/* </clearStoryContext.Provider> */}
-                            </handleStoryContext.Provider>
-                        </useLocationContext.Provider>
-                    </useLastNameContext.Provider>
-                </useFirstNameContext.Provider>
+                <firstNameContext.Provider value={[firstName, setFirstName]}>
+                    <lastNameContext.Provider value={[lastName, setLastName]}>
+                        <locationContext.Provider value={[location, setLocation]}>
+                            <modalContext.Provider value={[isModalOpen, setIsModalOpen]}>
+                                <thankYouContext.Provider value={[thankYou, setThankYou]}>
+                                    <handleStoryContext.Provider value={handleStorySubmit}>
+                                        {/* <clearStoryContext.Provider value={clearStory}> */}
+                                            {children}
+                                        {/* </clearStoryContext.Provider> */}
+                                    </handleStoryContext.Provider>
+                                </thankYouContext.Provider>
+                            </modalContext.Provider>
+                        </locationContext.Provider>
+                    </lastNameContext.Provider>
+                </firstNameContext.Provider>
             </userStoryContext.Provider>
         </StoryContext.Provider>
     )
