@@ -2,19 +2,13 @@ import React from 'react';
 import SingleProfileB from './SingleProfileB';
 import './ProfilesB.css';
 import Story from './Story';
-import { useStoriesContext, useStory, useFirstName, useLastName, useLocation } from './StoryContext';
+import { useStoriesContext } from './StoryContext';
 
 
 
 export default function ProfilesB () {
 const [stories] = useStoriesContext();
-const [userStory, setUserStory] = useStory();
-const [firstName, setFirstName] = useFirstName();
-const [lastName, setLastName] = useLastName();
-const [location, setLocation] = useLocation();
-
-
-
+console.log('your stories: ',stories)
 
     return(
         <div className="profile-container">
@@ -25,12 +19,7 @@ const [location, setLocation] = useLocation();
             <SingleProfileB />
             <SingleProfileB />
             {stories && stories.map((story, i)=> 
-            <Story key={"story_"+ i} story={story} 
-                userStory={userStory}
-                firstName={firstName} 
-                lastName={lastName}
-                location={location}
-            />)}
+            <Story key={"story_"+ i} story={story}  />)}
 
         </div>
     )

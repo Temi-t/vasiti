@@ -3,14 +3,14 @@ import React,{useState, createContext, useContext, useEffect} from 'react';
 
 const LS_KEY = "story.key";
 
-const StoryContext = createContext();
+const storyContext = createContext();
 export function useStoriesContext(){
-    return useContext(StoryContext)
+    return useContext(storyContext)
 }
-// const clearStoryContext = createContext();
-// export function useClearStoryContext(){
-//     return useContext(clearStoryContext)
-// }
+const clearStoryContext = createContext();
+export function useClearStoryContext(){
+    return useContext(clearStoryContext)
+}
 const handleStoryContext = createContext();
 export function useHandleStoryContext(){
     return useContext(handleStoryContext)
@@ -39,6 +39,14 @@ const thankYouContext = createContext();
 export function useThanks(){
     return useContext(thankYouContext)
 }
+const customerContext = createContext();
+export function useCustomer(){
+    return useContext(customerContext)
+}
+const vendorContext = createContext();
+export function useVendor(){
+    return useContext(vendorContext);
+}
 
 export default function StoryProvider({children}){
     const [stories, setStories] = useState([]);
@@ -48,6 +56,8 @@ export default function StoryProvider({children}){
     const [location, setLocation] = useState('');
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [thankYou, setThankYou] = useState(false);
+    const [customer, setCustomer] = useState(false);
+    const [vendor, setVendor] = useState(false);
 
 //   const storyInput = useRef();
 
@@ -76,50 +86,32 @@ export default function StoryProvider({children}){
         localStorage.setItem(LS_KEY, JSON.stringify(stories))
     }, [stories]);
 
-    const rand = () => {
-    return Math.floor((Math.random() * 10000) + 1)
+    const clearStory = () => {
+    localStorage.clear()
     }
-
-    const handleStorySubmit = (e) => {
-        e.preventDefault()
-    // const userInput = storyInput.current.value
-    // const {name, value} = e.target
-    const {target} = e;
-    const {name, value} = target;
-
-    console.log(value)
-    if(value === "") return
- 
-    setStories(prevStories => [
-        ...prevStories, {
-        id: rand(),
-        [name]: firstName }
-    ])
-    e.target.value = null
-    }
-
-    // const clearStory = () => {
-    // localStorage.clear()
-    // }
     return(
-        <StoryContext.Provider value={[stories, setStories]}>
+        <storyContext.Provider value={[stories, setStories]}>
             <userStoryContext.Provider value={[userStory, setUserStory]}>
                 <firstNameContext.Provider value={[firstName, setFirstName]}>
                     <lastNameContext.Provider value={[lastName, setLastName]}>
                         <locationContext.Provider value={[location, setLocation]}>
                             <modalContext.Provider value={[isModalOpen, setIsModalOpen]}>
                                 <thankYouContext.Provider value={[thankYou, setThankYou]}>
-                                    <handleStoryContext.Provider value={handleStorySubmit}>
-                                        {/* <clearStoryContext.Provider value={clearStory}> */}
-                                            {children}
-                                        {/* </clearStoryContext.Provider> */}
-                                    </handleStoryContext.Provider>
+                                    <customerContext.Provider value={[customer, setCustomer]}>
+                                        <vendorContext.Provider value={[vendor, setVendor]}>
+                                            {/* <handleStoryContext.Provider value={handleStorySubmit}> */}
+                                                <clearStoryContext.Provider value={clearStory}>
+                                                    {children}
+                                                </clearStoryContext.Provider>
+                                            {/* </handleStoryContext.Provider> */}
+                                        </vendorContext.Provider>
+                                    </customerContext.Provider>
                                 </thankYouContext.Provider>
                             </modalContext.Provider>
                         </locationContext.Provider>
                     </lastNameContext.Provider>
                 </firstNameContext.Provider>
             </userStoryContext.Provider>
-        </StoryContext.Provider>
+        </storyContext.Provider>
     )
 }
