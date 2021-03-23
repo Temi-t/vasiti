@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "75838bcae98ab300c93d53751cc108d9",
+    "revision": "830bdeafb7b4f9061988badb4bd961e6",
     "url": "/vasiti/index.html"
   },
   {
-    "revision": "ee4839d4b90115691f4e",
+    "revision": "6066fc8d842efbac0aba",
     "url": "/vasiti/static/css/main.afb530aa.chunk.css"
   },
   {
-    "revision": "dca280bce6f2d87e0c6b",
-    "url": "/vasiti/static/js/2.66ef8cd7.chunk.js"
+    "revision": "9fc52d76d30918dbf41c",
+    "url": "/vasiti/static/js/2.74a61489.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/vasiti/static/js/2.66ef8cd7.chunk.js.LICENSE.txt"
+    "url": "/vasiti/static/js/2.74a61489.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ee4839d4b90115691f4e",
-    "url": "/vasiti/static/js/main.79d075ad.chunk.js"
+    "revision": "6066fc8d842efbac0aba",
+    "url": "/vasiti/static/js/main.a0e47841.chunk.js"
   },
   {
     "revision": "b34825b2c6d0ce76f903",

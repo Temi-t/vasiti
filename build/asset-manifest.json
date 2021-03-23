@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/vasiti/static/css/main.afb530aa.chunk.css",
-    "main.js": "/vasiti/static/js/main.79d075ad.chunk.js",
-    "main.js.map": "/vasiti/static/js/main.79d075ad.chunk.js.map",
+    "main.js": "/vasiti/static/js/main.a0e47841.chunk.js",
+    "main.js.map": "/vasiti/static/js/main.a0e47841.chunk.js.map",
     "runtime-main.js": "/vasiti/static/js/runtime-main.0e43d44b.js",
     "runtime-main.js.map": "/vasiti/static/js/runtime-main.0e43d44b.js.map",
-    "static/js/2.66ef8cd7.chunk.js": "/vasiti/static/js/2.66ef8cd7.chunk.js",
-    "static/js/2.66ef8cd7.chunk.js.map": "/vasiti/static/js/2.66ef8cd7.chunk.js.map",
+    "static/js/2.74a61489.chunk.js": "/vasiti/static/js/2.74a61489.chunk.js",
+    "static/js/2.74a61489.chunk.js.map": "/vasiti/static/js/2.74a61489.chunk.js.map",
     "index.html": "/vasiti/index.html",
-    "precache-manifest.71f1784093ae4157057974a1caec5606.js": "/vasiti/precache-manifest.71f1784093ae4157057974a1caec5606.js",
+    "precache-manifest.7a54f43357db58a5cf9a669635e0d626.js": "/vasiti/precache-manifest.7a54f43357db58a5cf9a669635e0d626.js",
     "service-worker.js": "/vasiti/service-worker.js",
     "static/css/main.afb530aa.chunk.css.map": "/vasiti/static/css/main.afb530aa.chunk.css.map",
-    "static/js/2.66ef8cd7.chunk.js.LICENSE.txt": "/vasiti/static/js/2.66ef8cd7.chunk.js.LICENSE.txt",
+    "static/js/2.74a61489.chunk.js.LICENSE.txt": "/vasiti/static/js/2.74a61489.chunk.js.LICENSE.txt",
     "static/media/Adetola.png": "/vasiti/static/media/Adetola.2f047f45.png",
     "static/media/good-guy.png": "/vasiti/static/media/good-guy.a85cd502.png",
     "static/media/phone.png": "/vasiti/static/media/phone.b9c48fbd.png",
@@ -22,8 +22,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.0e43d44b.js",
-    "static/js/2.66ef8cd7.chunk.js",
+    "static/js/2.74a61489.chunk.js",
     "static/css/main.afb530aa.chunk.css",
-    "static/js/main.79d075ad.chunk.js"
+    "static/js/main.a0e47841.chunk.js"
   ]
 }
