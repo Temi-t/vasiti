@@ -6,7 +6,7 @@ import Button from '@material-ui/core/Button';
 
 
 export default function Stories () {
-    const [stories, setStories] = useStoriesContext();
+    const [ setStories] = useStoriesContext();
     const [userStory, setUserStory] = useStory();
     const [firstName, setFirstName] = useFirstName();
     const [lastName, setLastName] = useLastName();
@@ -162,18 +162,23 @@ const handleVendor = () => {
                 />
 
                 <div className="story-btn">
-                  {/* <Button className="btn" size="large" variant="contained"
+                  <Button  
+                    type="submit"
+                    className="btn" 
+                    // className={classes.button}
+                    size="large" 
+                    variant="contained"
                     href="#contained-buttons" 
                     style={{backgroundColor: "#FF5C00",
                     color: "white",
                     margin: '0',
                     width: "50%",
                     float: "right"}}
-                    value="time to submit modal-1"
                     onClick={handleThanks}
+
                   >Share your story!
-                  </Button> */}
-                  <button type='submit' >Share it</button>
+                  </Button>
+                  {/* <button type='submit' >Share it</button> */}
                 </div>
               </form>
           </div>
