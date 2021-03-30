@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/vasiti/static/css/main.bf48312e.chunk.css",
-    "main.js": "/vasiti/static/js/main.b26a5c7b.chunk.js",
-    "main.js.map": "/vasiti/static/js/main.b26a5c7b.chunk.js.map",
+    "main.css": "/vasiti/static/css/main.540ad0fd.chunk.css",
+    "main.js": "/vasiti/static/js/main.f6ba2bdd.chunk.js",
+    "main.js.map": "/vasiti/static/js/main.f6ba2bdd.chunk.js.map",
     "runtime-main.js": "/vasiti/static/js/runtime-main.0e43d44b.js",
     "runtime-main.js.map": "/vasiti/static/js/runtime-main.0e43d44b.js.map",
     "static/js/2.b21e4639.chunk.js": "/vasiti/static/js/2.b21e4639.chunk.js",
     "static/js/2.b21e4639.chunk.js.map": "/vasiti/static/js/2.b21e4639.chunk.js.map",
     "index.html": "/vasiti/index.html",
-    "precache-manifest.78906809633e28148d6db4f88ef05f50.js": "/vasiti/precache-manifest.78906809633e28148d6db4f88ef05f50.js",
+    "precache-manifest.7f45e1f14c3ae16ff029eb5264fcab5b.js": "/vasiti/precache-manifest.7f45e1f14c3ae16ff029eb5264fcab5b.js",
     "service-worker.js": "/vasiti/service-worker.js",
-    "static/css/main.bf48312e.chunk.css.map": "/vasiti/static/css/main.bf48312e.chunk.css.map",
+    "static/css/main.540ad0fd.chunk.css.map": "/vasiti/static/css/main.540ad0fd.chunk.css.map",
     "static/js/2.b21e4639.chunk.js.LICENSE.txt": "/vasiti/static/js/2.b21e4639.chunk.js.LICENSE.txt",
     "static/media/Adetola.png": "/vasiti/static/media/Adetola.2f047f45.png",
     "static/media/good-guy.png": "/vasiti/static/media/good-guy.a85cd502.png",
@@ -23,7 +23,7 @@
   "entrypoints": [
     "static/js/runtime-main.0e43d44b.js",
     "static/js/2.b21e4639.chunk.js",
-    "static/css/main.bf48312e.chunk.css",
-    "static/js/main.b26a5c7b.chunk.js"
+    "static/css/main.540ad0fd.chunk.css",
+    "static/js/main.f6ba2bdd.chunk.js"
   ]
 }
