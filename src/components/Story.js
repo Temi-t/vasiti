@@ -2,7 +2,6 @@ import React from 'react';
 
 export default function Story ({ story }) {
     return(
-        <div>
             <div className="card-profile" >
                 <img src={story.imageUrl} alt="profile-pic"/>
 
@@ -15,6 +14,5 @@ export default function Story ({ story }) {
                     <p>{story.userStory}</p>
                 </div>
             </div>
-        </div>
     )
 }

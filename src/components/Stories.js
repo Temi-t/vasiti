@@ -6,7 +6,7 @@ import Button from '@material-ui/core/Button';
 
 
 export default function Stories () {
-    const [ setStories] = useStoriesContext();
+    const [ stories, setStories] = useStoriesContext();
     const [userStory, setUserStory] = useStory();
     const [firstName, setFirstName] = useFirstName();
     const [lastName, setLastName] = useLastName();
@@ -65,9 +65,9 @@ const handleVendor = () => {
       return Math.floor((Math.random() * 10000) + 1)
     }
     const addStory = (story) => {
-      console.log(story)
-      const newStory = {id:rand(), ...story}
+      const newStory = {id:rand(), ...story};
       setStories(prevStories => [...prevStories, newStory])
+      console.log(story)
     }
 
 
@@ -83,6 +83,7 @@ const handleVendor = () => {
       setVendor(false);
       setCustomer(false);
       setImageUrl(null);
+      handleThanks();
     }
     
     return(
@@ -90,7 +91,7 @@ const handleVendor = () => {
         {isModalOpen ? 
           <div className="modal-bg">
             <div className="stories-form">
-             <form className="story-class" onSubmit={handleSubmit}>
+             <form className="story-class" onSubmit={handleSubmit} autoComplete="none"  >
 
                 < span className="x" onClick={()=>setIsModalOpen(!isModalOpen)} >X</span>
                 <h2>Share your amazing story!</h2>
@@ -107,6 +108,7 @@ const handleVendor = () => {
                   <div>
                     <label htmlFor="firstName">Firstname</label><br/>
                     <input type="text" 
+                      autoComplete="none"
                       id="firstName"
                       name="firstName" 
                       onChange={handleFirstName} 
@@ -116,9 +118,13 @@ const handleVendor = () => {
                   </div>
                   <div>
                     <label htmlFor="lastName">Lastname</label><br/>
-                    <input type="text" id="lastName" name="lastName" 
-                    onChange={handleLastName} placeholder="Enter last name" 
-                    value={lastName} />
+                    <input type="text" id="lastName"
+                      autoComplete="none" 
+                      name="lastName" 
+                      onChange={handleLastName} 
+                      placeholder="Enter last name" 
+                      value={lastName} 
+                    />
                   </div>
                 </div><br/>
 
@@ -154,15 +160,17 @@ const handleVendor = () => {
                   <label htmlFor="vendor">Vendor</label>
                 </pre>
 
+                {/* user location */}
                 <label htmlFor="location">City or Higher Institution(for Students)</label>
-                <input type="text" 
+                <input type="text"
+                  autoComplete="none" 
                   id="location" 
                   name="location"
                   onChange={handleLocation} value={location} 
                 />
 
                 <div className="story-btn">
-                  <Button  
+                  {/* <Button  
                     type="submit"
                     className="btn" 
                     // className={classes.button}
@@ -177,8 +185,9 @@ const handleVendor = () => {
                     onClick={handleThanks}
 
                   >Share your story!
-                  </Button>
-                  {/* <button type='submit' >Share it</button> */}
+                  </Button> */}
+                  <button type='submit'>
+                    Share your story!</button>
                 </div>
               </form>
           </div>
